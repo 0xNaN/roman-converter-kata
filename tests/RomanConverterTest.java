@@ -10,4 +10,9 @@ public class RomanConverterTest {
 		assertEquals("", romanConverter.convert(0));
 	}
 	
+	@Test public void 
+	return_I_for_one() throws Exception {
+		RomanConverter romanConverter = new RomanConverter();
+		assertEquals("I", romanConverter.convert(1));
+	}
 }
