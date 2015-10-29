@@ -21,4 +21,9 @@ public class RomanConverterTest {
 	return_I_for_one() throws Exception {
 		assertEquals("I", romanConverter.convert(1));
 	}
+	
+	@Test public void
+	return_V_for_five() {
+		assertEquals("V", romanConverter.convert(5));
+	}
 }
