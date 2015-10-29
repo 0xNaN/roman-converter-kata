@@ -10,6 +10,7 @@ public class RomanConverter {
 		 * The order is important since it defines how the keys are searched
 		 */
 		arabic2roman.put(5, "V");
+		arabic2roman.put(4, "IV");
 		arabic2roman.put(1, "I");
 	}
 	
