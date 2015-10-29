@@ -1,39 +1,48 @@
 import static org.junit.Assert.*;
 
+import java.util.Arrays;
+import java.util.Collection;
+
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+import org.junit.runners.Parameterized.Parameters;
 
-
+@RunWith(Parameterized.class)
 public class RomanConverterTest {
 	RomanConverter romanConverter;
+	private int arabic;
+	private String roman;
 	
+	@Parameters
+    public static Collection<Object[]> getAllConversion() {
+        return Arrays.asList(new Object[][] {
+                {1, "I"},
+                {2, "II"},
+                {4, "IV"},
+                {5, "V"}
+        });
+    }
+	
+    public RomanConverterTest(int arabic, String roman) {
+    	this.arabic = arabic;
+    	this.roman  = roman;
+    }
+    
 	@Before 
 	public void setUp() {
 		romanConverter = new RomanConverter();		
 	}
 	
 	@Test public void
+	checks_conversions() {
+		assertEquals(this.roman, romanConverter.convert(this.arabic));
+	}
+	
+	@Test public void
 	return_empty_string_for_zero() {
 		assertEquals("", romanConverter.convert(0));
 	}
-	
-	@Test public void 
-	return_I_for_one() throws Exception {
-		assertEquals("I", romanConverter.convert(1));
-	}
-	
-	@Test public void
-	return_V_for_five() {
-		assertEquals("V", romanConverter.convert(5));
-	}
-	
-	@Test public void
-	return_II_for_two() {
-		assertEquals("II", romanConverter.convert(2));
-	}
-	
-	@Test public void
-	return_IV_for_four() {
-		assertEquals("IV", romanConverter.convert(4));
-	}
+
 }
