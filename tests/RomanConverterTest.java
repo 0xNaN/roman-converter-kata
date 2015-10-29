@@ -26,4 +26,9 @@ public class RomanConverterTest {
 	return_V_for_five() {
 		assertEquals("V", romanConverter.convert(5));
 	}
+	
+	@Test public void
+	return_II_for_two() {
+		assertEquals("II", romanConverter.convert(2));
+	}
 }

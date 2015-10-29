@@ -6,8 +6,9 @@ public class RomanConverter {
 			return "";
 		else if(number == 1)
 			return "I";
-		
-		return "V";
+		else if(number == 5)
+			return "V";
+		return "II";
 	}
 
 }
