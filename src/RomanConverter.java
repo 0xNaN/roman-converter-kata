@@ -9,9 +9,19 @@ public class RomanConverter {
 		/*
 		 * The order is important since it defines how the keys are searched
 		 */
-		arabic2roman.put(5, "V");
-		arabic2roman.put(4, "IV");
-		arabic2roman.put(1, "I");
+		arabic2roman.put(1000,	"M");
+		arabic2roman.put(900,	"CM");
+		arabic2roman.put(500,	"D");
+		arabic2roman.put(400,	"CD");
+		arabic2roman.put(100,	"C");
+		arabic2roman.put(90,	"XC");
+		arabic2roman.put(50,	"L");
+		arabic2roman.put(40,	"XL");
+		arabic2roman.put(10,	"X");
+		arabic2roman.put(9,		"IX");
+		arabic2roman.put(5, 	"V");
+		arabic2roman.put(4, 	"IV");
+		arabic2roman.put(1, 	"I");
 	}
 	
 	public String convert(int number) {
