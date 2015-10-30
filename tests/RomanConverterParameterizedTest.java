@@ -29,11 +29,19 @@ public class RomanConverterParameterizedTest {
 	@Parameters
 	public static Collection<Object[]> testCases () {
 		return Arrays.asList(new Object[][] {
-				{1, "I"},
-				{2, "II"},
-				{3, "III"},
-				{5, "V"},
-				{10, "X"}
+				{1,       "I"},
+				{2,       "II"},
+				{3,       "III"},
+				{5,       "V"},
+				{10,      "X"},
+                {40,      "XL"},
+                {50,      "L"},
+                {90,      "XC"},
+                {100,     "C"},
+                {400,     "CD"},
+                {500,     "D"},
+                {900,     "CM"},
+                {1000,    "M"}
 		});
 	}
 	

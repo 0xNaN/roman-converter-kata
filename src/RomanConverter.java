@@ -7,9 +7,17 @@ public class RomanConverter {
 	 * in decreasing order
 	 */
 	Map<Integer, String> arabic2romans = new LinkedHashMap<Integer, String>() {{
-		put(10, "X");
-		put(5,  "V");
-		put(1,	"I");
+		put(1000,    "M");
+		put(900,     "CM");
+		put(500,     "D");
+		put(400,     "CD");
+		put(100,     "C");
+		put(90,      "XC");
+		put(50,      "L");
+		put(40,      "XL");
+		put(10,      "X");
+		put(5,       "V");
+		put(1,       "I");
 	}};
 	
 	public String convert(int arabic) {
