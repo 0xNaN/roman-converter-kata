@@ -3,9 +3,9 @@ import java.util.Map;
 
 public class RomanConverter {
 	Map<Integer, String> arabic2romans = new LinkedHashMap<Integer, String>() {{
-		put(1,	"I");
-		put(5,  "V");
 		put(10, "X");
+		put(5,  "V");
+		put(1,	"I");
 	}};
 	
 	public String convert(int arabic) {
@@ -15,13 +15,14 @@ public class RomanConverter {
 		if(arabic2romans.containsKey(arabic))
 			return arabic2romans.get(arabic);
 		
-		int factor = biggerKnowRomansLesserThan(arabic);
+		int factor = biggerKnowArabicLesserThan(arabic);
 		return convert(factor)+convert(arabic - factor);
 	}
 
-	private int biggerKnowRomansLesserThan(int arabic) {
-		if(arabic == 2 || arabic == 3)
-			return 1;
+	private int biggerKnowArabicLesserThan(int arabic) {
+		for(Integer knowArabic: arabic2romans.keySet())
+			if(knowArabic <= arabic)
+				return knowArabic;
 		return -1;
 	}
 
