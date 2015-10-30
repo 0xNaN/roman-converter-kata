@@ -16,11 +16,8 @@ public class RomanConverter {
 		if(arabic == 0)
 			return "";
 		
-		if(arabic2romans.containsKey(arabic))
-			return arabic2romans.get(arabic);
-		
 		int factor = biggerKnowArabicLesserThan(arabic);
-		return convert(factor)+convert(arabic - factor);
+		return arabic2romans.get(factor)+convert(arabic - factor);
 	}
 
 	private int biggerKnowArabicLesserThan(int arabic) {
