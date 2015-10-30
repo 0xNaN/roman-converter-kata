@@ -2,7 +2,9 @@
 public class RomanConverter {
 
 	public String convert(int arabic) {
-		return "";
+		if(arabic == 0)
+			return "";
+		return "I";
 	}
 
 }

@@ -11,4 +11,11 @@ public class RomanConverterTest {
 		RomanConverter romanConverter = new RomanConverter();
 		assertEquals("", romanConverter.convert(0));
 	}
+	
+	@Test
+	public void 
+	should_return_I_for_one() throws Exception {
+		RomanConverter romanConverter = new RomanConverter();
+		assertEquals("I", romanConverter.convert(1));
+	}
 }
