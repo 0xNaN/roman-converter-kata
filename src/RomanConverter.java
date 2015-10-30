@@ -13,7 +13,7 @@ public class RomanConverter {
 			return "V";
 		else if(arabic == 10)
 			return "X";
-		return "II";
+		return "I"+"I";
 	}
 
 }
