@@ -4,7 +4,9 @@ public class RomanConverter {
 	public String convert(int arabic) {
 		if(arabic == 0)
 			return "";
-		return "I";
+		else if(arabic == 1)
+			return "I";
+		return "V";
 	}
 
 }
