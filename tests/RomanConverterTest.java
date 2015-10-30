@@ -29,4 +29,10 @@ public class RomanConverterTest {
 	should_return_V_for_five() throws Exception {
 		assertEquals("V", romanConverter.convert(5));
 	}
+	
+	@Test
+	public void
+	should_return_X_for_ten() throws Exception {
+		assertEquals("X", romanConverter.convert(10));
+	}
 }
