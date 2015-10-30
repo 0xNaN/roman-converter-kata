@@ -13,8 +13,14 @@ public class RomanConverter {
 			return "V";
 		else if(arabic == 10)
 			return "X";
-		int factor = 1;
+		int factor = biggerKnowRomansLesserThan(arabic);
 		return convert(factor)+convert(arabic - factor);
+	}
+
+	private int biggerKnowRomansLesserThan(int arabic) {
+		if(arabic == 2)
+			return 1;
+		return -1;
 	}
 
 }
