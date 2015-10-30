@@ -2,6 +2,10 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class RomanConverter {
+	/*
+	 * The order is important, since the keys must be looped
+	 * in decreasing order
+	 */
 	Map<Integer, String> arabic2romans = new LinkedHashMap<Integer, String>() {{
 		put(10, "X");
 		put(5,  "V");
