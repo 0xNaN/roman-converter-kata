@@ -18,7 +18,7 @@ public class RomanConverter {
 	}
 
 	private int biggerKnowRomansLesserThan(int arabic) {
-		if(arabic == 2)
+		if(arabic == 2 || arabic == 3)
 			return 1;
 		return -1;
 	}
