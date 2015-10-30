@@ -30,6 +30,7 @@ public class RomanConverterParameterizedTest {
 	public static Collection<Object[]> testCases () {
 		return Arrays.asList(new Object[][] {
 				{1, "I"},
+				{2, "II"},
 				{5, "V"},
 				{10, "X"}
 		});

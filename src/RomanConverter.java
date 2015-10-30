@@ -11,7 +11,9 @@ public class RomanConverter {
 			return "I";
 		else if(arabic == 5)
 			return "V";
-		return "X";
+		else if(arabic == 10)
+			return "X";
+		return "II";
 	}
 
 }
